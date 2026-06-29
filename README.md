@@ -1,18 +1,20 @@
 # code-research
 
-独立发布的 Code Research skill，用于在 Codex / Claude Code 中对当前项目做深度源码研究，并产出中文分析文档。
+Code Research 是一个面向源码理解的研究工作流。它帮助你从产品目标、系统边界、架构取舍、核心机制、数据流、演进历史、阅读路径和质量风险几个角度，系统理解一个已有项目。
 
-这个仓库本身就是 skill 根目录，不包含 `.codex-plugin/`、`.claude-plugin/` 或 marketplace 配置。
+它不做浅层文件导览，而是把代码库还原成一组可讨论的设计判断：这个系统为什么存在，作者在 Day 0 会如何定义问题和 MVP，当前实现为什么长成这样，后来者应该按什么路径阅读源码。
 
-## 内容
+默认产出中文研究文档，写入目标项目的 `docs/code-research/`。
 
-- `SKILL.md`：skill 入口文件。
-- `templates/`：研究报告模板。
-- `agents/openai.yaml`：Codex UI 元数据。
-- `evals/evals.json`：触发行为测试用例。
+## 适合场景
 
-## 使用
+- 接手一个陌生项目，需要快速建立全局理解。
+- 想从源码作者视角复盘产品需求和技术方案。
+- 需要规划一条可执行的源码阅读路径。
+- 希望识别核心模块、关键数据流和维护风险。
+
+## 使用方式
 
 将本仓库作为一个 skill 安装或放置到 Codex / Claude Code 的 skills 目录后，在对话中使用 `code-research` 或 `$code-research` 触发。
 
-默认输出目录为目标项目内的 `docs/code-research/`。
+本仓库是 skill 根目录，不包含 `.codex-plugin/`、`.claude-plugin/` 或 marketplace 配置。
