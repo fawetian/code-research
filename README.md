@@ -176,5 +176,3 @@ code-research/
 │           └── code-research/
 └── templates/
 ```
-
-本仓库通过 marketplace 安装；`plugins/code-research/` 是最小插件包装，里面只分发这一个 skill。
