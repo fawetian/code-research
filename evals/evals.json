@@ -1,0 +1,121 @@
+{
+  "name": "code-research",
+  "version": "1.0.0",
+  "description": "Evaluations for code-research skill trigger accuracy",
+  "evals": [
+    {
+      "name": "trigger-positive-explicit",
+      "type": "trigger",
+      "description": "Skill should trigger on explicit code-research invocations",
+      "prompts": [
+        {
+          "input": "code-research",
+          "expected": true,
+          "reason": "Direct skill name invocation"
+        },
+        {
+          "input": "帮我深入研究这个项目的架构设计",
+          "expected": true,
+          "reason": "Request to deeply research project architecture"
+        },
+        {
+          "input": "I want to deeply understand this codebase's design philosophy",
+          "expected": true,
+          "reason": "Request to understand design philosophy matches skill description"
+        },
+        {
+          "input": "研究一下这个项目的核心机制和数据流",
+          "expected": true,
+          "reason": "Request to research core mechanisms and data flow"
+        },
+        {
+          "input": "Give me a comprehensive understanding of how this project works, including key algorithms and architectural decisions",
+          "expected": true,
+          "reason": "Deep understanding request covering architectural decisions and algorithms"
+        },
+        {
+          "input": "分析这个项目的 commit history，梳理系统的演进路线和演进原因",
+          "expected": true,
+          "reason": "Request to research system evolution history and rationale from commits"
+        },
+        {
+          "input": "从第一性原理出发，重新思考如果从 0 设计这套系统应该怎么演进",
+          "expected": true,
+          "reason": "Request for first-principles design evolution analysis"
+        },
+        {
+          "input": "Map the historical evolution of this codebase to the current implementation structure",
+          "expected": true,
+          "reason": "Request for implementation map connecting history to current code"
+        },
+        {
+          "input": "code-research 分析这个项目的代码目录和结构，规划一条源码阅读路径",
+          "expected": true,
+          "reason": "Request for source reading path and directory structure analysis"
+        },
+        {
+          "input": "code-research 我是后端工程师，前端基础比较薄弱，深入理解这个项目需要补哪些基础知识模块",
+          "expected": true,
+          "reason": "Request for prerequisite knowledge modules adapted to user background"
+        },
+        {
+          "input": "code-research 站在源码作者 Day 0 视角，分析这套系统的需求、MVP 边界和技术方案",
+          "expected": true,
+          "reason": "Request for author Day 0 product and technical-solution reconstruction"
+        },
+        {
+          "input": "code-research 帮我分析这个项目的代码质量，给我一份质量地图",
+          "expected": true,
+          "reason": "Request for source-backed code quality map"
+        },
+        {
+          "input": "深入研究这个仓库，顺便告诉我哪些模块最难维护",
+          "expected": true,
+          "reason": "Request for deep repository research plus maintainability risk analysis"
+        },
+        {
+          "input": "I want a source-backed maintainability quality map for this codebase",
+          "expected": true,
+          "reason": "Request for quality map grounded in source evidence"
+        }
+      ]
+    },
+    {
+      "name": "trigger-negative-surface-questions",
+      "type": "trigger",
+      "description": "Skill should NOT trigger for surface-level or quick questions about code",
+      "prompts": [
+        {
+          "input": "What does this function do?",
+          "expected": false,
+          "reason": "Simple question about a single function, not deep research"
+        },
+        {
+          "input": "Fix the bug in this file",
+          "expected": false,
+          "reason": "Bug fix request, not a research task"
+        },
+        {
+          "input": "How do I install this project?",
+          "expected": false,
+          "reason": "Installation question, not deep code research"
+        },
+        {
+          "input": "review 当前 diff 找 bug",
+          "expected": false,
+          "reason": "Diff bug review belongs to code-review, not code-research"
+        },
+        {
+          "input": "扫一下安全漏洞",
+          "expected": false,
+          "reason": "Security vulnerability scanning belongs to security-review"
+        },
+        {
+          "input": "帮我重构这段代码",
+          "expected": false,
+          "reason": "Refactoring request is code modification, not research"
+        }
+      ]
+    }
+  ]
+}
