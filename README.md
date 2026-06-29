@@ -224,8 +224,6 @@ code-research/
 ├── .claude-plugin/
 │   └── marketplace.json
 ├── SKILL.md
-├── agents/
-│   └── openai.yaml
 ├── evals/
 │   └── evals.json
 ├── plugins/
