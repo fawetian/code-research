@@ -13,8 +13,49 @@ Code Research 是一个面向源码理解的研究工作流。它帮助你从产
 - 需要规划一条可执行的源码阅读路径。
 - 希望识别核心模块、关键数据流和维护风险。
 
-## 使用方式
+## 安装
 
-将本仓库作为一个 skill 安装或放置到 Codex / Claude Code 的 skills 目录后，在对话中使用 `code-research` 或 `$code-research` 触发。
+### Codex
+
+个人安装，所有项目可用：
+
+```bash
+mkdir -p ~/.agents/skills
+git clone git@fawetian.github.com:fawetian/code-research.git ~/.agents/skills/code-research
+```
+
+项目安装，只在当前项目可用：
+
+```bash
+mkdir -p .agents/skills
+git clone git@fawetian.github.com:fawetian/code-research.git .agents/skills/code-research
+```
+
+在 Codex 中使用 `code-research` 或 `$code-research` 触发。
+
+### Claude Code
+
+个人安装，所有项目可用：
+
+```bash
+mkdir -p ~/.claude/skills
+git clone git@fawetian.github.com:fawetian/code-research.git ~/.claude/skills/code-research
+```
+
+项目安装，只在当前项目可用：
+
+```bash
+mkdir -p .claude/skills
+git clone git@fawetian.github.com:fawetian/code-research.git .claude/skills/code-research
+```
+
+在 Claude Code 中使用 `/code-research` 触发，也可以让 Claude Code 根据请求自动选择。
+
+## 更新
+
+```bash
+git -C ~/.agents/skills/code-research pull --ff-only
+git -C ~/.claude/skills/code-research pull --ff-only
+```
 
 本仓库是 skill 根目录，不包含 `.codex-plugin/`、`.claude-plugin/` 或 marketplace 配置。
