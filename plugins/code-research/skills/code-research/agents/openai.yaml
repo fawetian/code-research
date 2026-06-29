@@ -1,0 +1,4 @@
+interface:
+  display_name: "Code Research"
+  short_description: "Deep codebase research and reading paths"
+  default_prompt: "Use $code-research to deeply research the current codebase and produce Chinese research documents."

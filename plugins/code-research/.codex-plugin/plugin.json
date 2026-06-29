@@ -1,0 +1,41 @@
+{
+  "name": "code-research",
+  "version": "1.0.0",
+  "description": "源码理解研究工作流：架构、机制、数据流、演进历史、阅读路径、Day 0 视角和质量地图",
+  "author": {
+    "name": "fawetian"
+  },
+  "homepage": "https://github.com/fawetian/code-research",
+  "repository": "https://github.com/fawetian/code-research",
+  "license": "MIT",
+  "keywords": [
+    "code",
+    "research",
+    "architecture",
+    "source-reading",
+    "quality"
+  ],
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "Code Research",
+    "shortDescription": "Deep codebase research and reading paths",
+    "longDescription": "Research an existing codebase from architecture, mechanisms, data flow, evolution history, source reading paths, Day 0 product and technical design, and maintainability risks.",
+    "developerName": "fawetian",
+    "category": "Coding",
+    "capabilities": [
+      "Interactive",
+      "Read",
+      "Write"
+    ],
+    "websiteURL": "https://github.com/fawetian/code-research",
+    "privacyPolicyURL": "https://github.com/fawetian/code-research",
+    "termsOfServiceURL": "https://github.com/fawetian/code-research",
+    "defaultPrompt": [
+      "Research this codebase and summarize the architecture",
+      "Build a source reading path for this project",
+      "Analyze Day 0 product and technical design"
+    ],
+    "brandColor": "#16A34A",
+    "screenshots": []
+  }
+}

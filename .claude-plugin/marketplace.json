@@ -1,0 +1,30 @@
+{
+  "name": "code-research",
+  "owner": {
+    "name": "fawetian",
+    "email": ""
+  },
+  "metadata": {
+    "description": "Code Research skill marketplace",
+    "version": "1.0.0",
+    "pluginRoot": "./plugins"
+  },
+  "plugins": [
+    {
+      "name": "code-research",
+      "source": "./plugins/code-research",
+      "description": "源码理解研究工作流：架构、机制、数据流、演进历史、阅读路径、Day 0 视角和质量地图",
+      "version": "1.0.0",
+      "author": {
+        "name": "fawetian"
+      },
+      "keywords": [
+        "code",
+        "research",
+        "architecture",
+        "source-reading",
+        "quality"
+      ]
+    }
+  ]
+}

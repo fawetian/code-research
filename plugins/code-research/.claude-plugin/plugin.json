@@ -1,0 +1,19 @@
+{
+  "name": "code-research",
+  "version": "1.0.0",
+  "description": "源码理解研究工作流：架构、机制、数据流、演进历史、阅读路径、Day 0 视角和质量地图",
+  "author": {
+    "name": "fawetian"
+  },
+  "license": "MIT",
+  "keywords": [
+    "code",
+    "research",
+    "architecture",
+    "source-reading",
+    "quality"
+  ],
+  "skills": [
+    "./skills/code-research"
+  ]
+}
