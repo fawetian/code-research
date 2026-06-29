@@ -21,62 +21,16 @@ Code Research 是一个面向源码理解的研究工作流。它帮助你从产
 
 ### Codex
 
-推荐通过 Codex plugin marketplace 安装：
-
 ```bash
 codex plugin marketplace add fawetian/code-research
 codex plugin add code-research@code-research
 ```
 
-如果你使用 SSH：
-
-```bash
-codex plugin marketplace add git@github.com:fawetian/code-research.git
-codex plugin add code-research@code-research
-```
-
-也可以直接安装为个人 skill，所有项目可用：
-
-```bash
-mkdir -p ~/.agents/skills
-git clone https://github.com/fawetian/code-research.git ~/.agents/skills/code-research
-```
-
-或安装为项目 skill，只在当前项目可用：
-
-```bash
-mkdir -p .agents/skills
-git clone https://github.com/fawetian/code-research.git .agents/skills/code-research
-```
-
 ### Claude Code
-
-推荐通过 Claude Code plugin marketplace 安装：
 
 ```text
 /plugin marketplace add fawetian/code-research
 /plugin install code-research@code-research
-```
-
-如果你使用 SSH：
-
-```text
-/plugin marketplace add git@github.com:fawetian/code-research.git
-/plugin install code-research@code-research
-```
-
-也可以直接安装为个人 skill，所有项目可用：
-
-```bash
-mkdir -p ~/.claude/skills
-git clone https://github.com/fawetian/code-research.git ~/.claude/skills/code-research
-```
-
-或安装为项目 skill，只在当前项目可用：
-
-```bash
-mkdir -p .claude/skills
-git clone https://github.com/fawetian/code-research.git .claude/skills/code-research
 ```
 
 ## 使用
@@ -198,20 +152,6 @@ Claude Code marketplace 安装更新：
 /plugin update code-research
 ```
 
-直接安装为个人 skill 时：
-
-```bash
-git -C ~/.agents/skills/code-research pull --ff-only
-git -C ~/.claude/skills/code-research pull --ff-only
-```
-
-直接安装为项目 skill 时：
-
-```bash
-git -C .agents/skills/code-research pull --ff-only
-git -C .claude/skills/code-research pull --ff-only
-```
-
 如果更新后没有立即出现，重启 Codex 或 Claude Code。
 
 ## 仓库结构
@@ -237,4 +177,4 @@ code-research/
 └── templates/
 ```
 
-本仓库同时支持两种安装形态：根目录是直接安装用的 skill；`plugins/code-research/` 是 marketplace 安装用的最小插件包装，里面只分发这一个 skill。
+本仓库通过 marketplace 安装；`plugins/code-research/` 是最小插件包装，里面只分发这一个 skill。
